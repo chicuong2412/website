@@ -1,0 +1,49 @@
+.picture {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 5%;
+    border-radius: 10px;
+
+    img {
+        width: inherit;
+    }
+}
+
+.locationPane {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vh;
+    height: 154px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.info {
+    width: 60%;
+}
+
+.address {
+    font-size: 20px;
+    color: sandybrown !important;
+    font-weight: 1000;
+    padding: 0 !important;
+}
+
+.note {
+    padding: 0 !important;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .locationPane {
+        width: 100%;
+    }
+}

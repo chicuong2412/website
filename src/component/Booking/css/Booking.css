@@ -1,0 +1,184 @@
+.Wrapper {
+    background-color: rgb(229, 231, 235);
+}
+
+.headingPane {
+    position: relative;
+    background-image: url(https://demo.harutheme.com/shang/wp-content/themes/shang/framework/admin-assets/images/theme-options/bg-page-title.jpg);
+}
+
+body {
+    background-color: rgb(229, 231, 235);
+}
+
+.clickChangeForm {
+    cursor: pointer;
+}
+
+.clickChangeForm:focus {
+    border: 1px solid #dee2e6;
+    border-left: none;
+}
+
+.noBorderSearch {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.headingPane::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.siteName {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    padding-top: 5%;
+    position: relative;
+    z-index: 30;
+}
+
+
+.breadcrumbBoard {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    padding-bottom: 70px;
+    z-index: 30;
+    position: relative;
+}
+
+.breadcrumb-item a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #d69c4a !important;
+}
+
+.input-group>input {
+    border-left: none;
+    background-color: #F7F7F7 !important;
+}
+
+.stepStyle {
+    font-size: 24px;
+    color: #d69c4a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.input-group-text {
+    background-color: #F7F7F7;
+    border-right: none;
+}
+
+
+.holdMainInfo {
+    margin-top: 15px;
+    width: fit-content;
+    background-color: white;
+    padding: 15px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.resultSearch {
+    width: fit-content;
+}
+
+.table {
+    width: fit-content;
+}
+
+.gap {
+    height: 20px;
+    width: 100%;
+}
+
+
+/* Location */
+
+.LocationForm {
+    width: fit-content;
+}
+
+.LocationForm .heading, .LocationChoosingHead .heading {
+    color: #d69c4a;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.LocationForm::before {
+    content: '';
+}
+
+.backIcon {
+    font-size: 34px;
+    position: absolute;
+}
+
+.holdFormServices {
+    margin-top: 15px;
+    width: 40%;
+    background-color: white;
+    padding: 15px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.serviceTable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 991.98px) {
+
+    .ServicesForm {
+        width: 100%;
+    }
+
+    .holdFormServices {
+        width: 100%;
+    }
+    
+}
+
+.holdMainInfoStylist {
+    width: 57.6%;
+    background-color: white;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stylistTable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+

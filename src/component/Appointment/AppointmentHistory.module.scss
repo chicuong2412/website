@@ -1,0 +1,90 @@
+.apointmetWrapper {
+
+    background-color: rgb(255, 255, 255);
+
+
+    .table {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2%;
+        row-gap: 10px;
+    }
+
+    .Pagination {
+        padding-bottom: 30px;
+    }
+
+    .tableHeading {
+        padding-top: 20px;
+
+        p {
+            font-size: 40px;
+            color: rgb(214, 156, 74);
+        }
+    }
+}
+
+
+
+.AppointmentPane {
+
+    position: relative;
+    width: 32%;
+    box-shadow: 10px 10px 20px #babecc,
+        -10px -10px 20px #ffffff;
+    padding: 15px;
+    padding-top: 35px;
+    background-color: #D9E8FD;
+
+    transition: box-shadow 500ms;
+
+
+    .expandButton {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    &:hover {
+        box-shadow: none;
+        transition: box-shadow 500ms;
+    }
+}
+
+.expandedCard {
+    position: fixed;
+    box-shadow: 10px 10px 20px #babecc,
+        -10px -10px 20px #ffffff;
+    background-color: #fff;
+    z-index: 999;
+    width: 50%;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    top: 20%;
+    left: 25%;
+
+    .expandButton {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    & p:nth-of-type(3) {
+        padding-top: 15px;
+    }
+
+    &::before {
+        content: 'Detail Infomation';
+        position: absolute;
+        top: -14px;
+        z-index: 110000;
+        font-size: 24px;
+        backdrop-filter: blur(3px);
+    }
+}

@@ -1,0 +1,62 @@
+.LoginContainer {
+
+    
+
+    .formInputs {
+
+        width: 60%;
+        background-color: white;
+        border: 1px solid gray;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        button {
+            background-color: #d69c4a;
+            border: none;
+            color: #fff;
+            font-weight: 700;
+            padding: 8px 15px;
+
+            &:hover {
+                background-color: #c78528;
+            }
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid gray;
+            padding: 5px 15px;
+            position: relative;
+
+            &:focus {
+                border: 1px solid #d69c4a;
+                outline: none;
+            }
+        }
+
+
+        .inputGroup {
+            margin-bottom: 10px;
+            position: relative;
+            label {
+                color: rgb(105, 105, 105);
+                font-weight: 700;
+                font-family: 'Times New Roman', Times, serif !important;
+                font-size: 16px;
+            }
+        }
+
+        .showPasswordIcon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            cursor: pointer;
+        }
+
+        
+    }
+
+}
