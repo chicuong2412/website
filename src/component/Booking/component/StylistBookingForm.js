@@ -8,13 +8,14 @@ import { useNavigate } from 'react-router-dom';
 
 export default function StylistBookingForm() {
 
-    const { dataStylist } = useInfo()
+    const { dataStylist, changeStylist } = useInfo()
     const navigate = useNavigate()
 
     useEffect(() => {
-        // $(".table").on('click', "button", function () {
-        //     props.changeStylist($(this).attr("id"), $(this).attr("name"))
-        // })
+        $(".stylistTable").on('click', ".stylistPane", function () {
+            changeStylist($(this).attr("id"), $(this).attr("name"));
+            navigate('/booking');
+        })
 
         $(".backIcon").on("click", function () {
             navigate('/booking')

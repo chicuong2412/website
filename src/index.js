@@ -6,10 +6,12 @@ import MainNavigation from './utils/Navigation';
 
 export default function App() {
   return (
-  <LoginProvider>
+
+    <LoginProvider>
       <MainNavigation></MainNavigation>
-  </LoginProvider>
-)}
+    </LoginProvider>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);

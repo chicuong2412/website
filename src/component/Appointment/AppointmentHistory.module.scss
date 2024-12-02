@@ -1,11 +1,10 @@
 .apointmetWrapper {
 
-    background-color: rgb(255, 255, 255);
-
+    background-image: url("./cta.jpg") !important;
 
     .table {
         padding-top: 20px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -15,6 +14,10 @@
 
     .Pagination {
         padding-bottom: 30px;
+    }
+
+    .Pagination nav ul {
+        background-color: #f5eee7;
     }
 
     .tableHeading {
@@ -27,17 +30,26 @@
     }
 }
 
+.cancelButton {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    cursor: pointer;
+}
+
 
 
 .AppointmentPane {
 
     position: relative;
     width: 32%;
-    box-shadow: 10px 10px 20px #babecc,
-        -10px -10px 20px #ffffff;
+    // box-shadow: 10px 10px 5px #babecc,
+    //     -10px -10px 5px #ffffff;
     padding: 15px;
     padding-top: 35px;
-    background-color: #D9E8FD;
+    background-color:  #f5eee7;
+    border: 10px solid #fff;
+    
 
     transition: box-shadow 500ms;
 
@@ -51,14 +63,16 @@
 
     &:hover {
         box-shadow: none;
-        transition: box-shadow 500ms;
     }
+}
+
+.title {
+  color: rgb(214, 156, 74);
+  font-weight: 1000;
 }
 
 .expandedCard {
     position: fixed;
-    box-shadow: 10px 10px 20px #babecc,
-        -10px -10px 20px #ffffff;
     background-color: #fff;
     z-index: 999;
     width: 50%;
@@ -77,14 +91,5 @@
 
     & p:nth-of-type(3) {
         padding-top: 15px;
-    }
-
-    &::before {
-        content: 'Detail Infomation';
-        position: absolute;
-        top: -14px;
-        z-index: 110000;
-        font-size: 24px;
-        backdrop-filter: blur(3px);
     }
 }

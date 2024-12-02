@@ -22,12 +22,34 @@ export default function Login() {
     }
 
     const userLoginHandler = (event) => {
-        console.log("username " + username)
-        let check = loginChecking(username, password)
         if (!username || !password) return;
-        setIsLogged(true)
-        localStorage.setItem("username", username)
-        navigate('/')
+        $.ajax({
+            url: "http://localhost:3120/identity/auth/customers/login",
+            type: 'POST',
+            dataType: 'json',
+            CORS: false,
+            contentType: 'application/json',
+            secure: true,
+            data: JSON.stringify({
+                username: username,
+                password: password
+            }),
+            async: false
+            ,
+            success: function (data) {
+                console.log(data);
+                if (data.code == 1000 && data.result.authenticated) {
+                    setIsLogged(true)
+                    localStorage.setItem("username", username)
+                    localStorage.setItem("AccessToken", data.result.token)
+                    navigate('/')
+                } else {
+
+                }
+            }
+        })
+
+        
     }
 
     useEffect(() => {

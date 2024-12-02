@@ -27,8 +27,8 @@ export default function LocationChoosing() {
 
     useEffect(() => {
         $(".table").on("click", ".paneClick", function (event) {
-            console.log($(this).attr("id"))
             changeLocation($(this).attr("id"))
+            navigate('/booking')
         })
 
         $(".backIcon").on("click", function () {

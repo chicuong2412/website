@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
 .Wrapper {
     background-color: rgb(229, 231, 235);
 }
@@ -23,6 +25,29 @@ body {
 .noBorderSearch {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.container-Booking {
+    padding-top: 50px;
+    background-color: rgb(245, 238, 231);
+    background-image: url("/src/images/20.jpg");
+    position: relative;
+    background-size: contain;
+}
+
+.container-Booking::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: calc(100% + 50px);
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+    top: -50px;
+}
+
+.holdMainInfo .input-group {
+    
 }
 
 .headingPane::before {
@@ -63,7 +88,7 @@ body {
 }
 
 .breadcrumb-item.active {
-    color: #d69c4a !important;
+    color: rgb(145, 118, 90) !important;
 }
 
 .input-group>input {
@@ -72,10 +97,11 @@ body {
 }
 
 .stepStyle {
-    font-size: 24px;
-    color: #d69c4a;
+    font-size: 20px;
+    color: rgb(145, 118, 90);
     margin-bottom: 10px;
     font-weight: 700;
+    /* text-transform: uppercase; */
 }
 
 .input-group-text {
@@ -85,18 +111,20 @@ body {
 
 
 .holdMainInfo {
-    margin-top: 15px;
-    width: fit-content;
+    width: 40rem;
     background-color: white;
-    padding: 15px;
+    padding: 15px 30px;
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5px;
+    position: relative;
+    z-index: 9;
 }
 
 .resultSearch {
-    width: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .table {
@@ -108,15 +136,53 @@ body {
     width: 100%;
 }
 
+/* Holding main form */
+
+.stepStyle {
+    
+}
+
+.holdingStep {
+    position: relative;
+}
+
+.tick {
+    display: flex;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(145, 118, 90);
+    top: 3px;
+    left: -25px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.leftLine {
+    display: block;
+    width: 3px;
+    height: 0;
+    background-color: rgb(145, 118, 90);
+    position: absolute;
+    left: -16px;
+    top: 22px;
+}
+
+.aleartEdit {
+    position: fixed;
+    top: 67px;
+    right: 30px;
+    z-index: 99999999;
+    display: none;
+}
 
 /* Location */
 
-.LocationForm {
-    width: fit-content;
-}
 
 .LocationForm .heading, .LocationChoosingHead .heading {
-    color: #d69c4a;
+    color: rgb(145, 118, 90);
     font-size: 24px;
     font-weight: 700;
     text-align: center;
@@ -133,9 +199,8 @@ body {
 }
 
 .holdFormServices {
-    margin-top: 15px;
-    width: 40%;
-    background-color: white;
+    width: 40rem;
+    background-color: #f5eee7;
     padding: 15px;
     height: fit-content;
     margin-left: auto;
@@ -158,15 +223,25 @@ body {
     .holdFormServices {
         width: 100%;
     }
+
+    .holdMainInfo {
+        width: 100% !important;
+    }
+
+    .holdMainInfoStylist {
+        width: 100% !important;
+    }
     
 }
 
 .holdMainInfoStylist {
-    width: 57.6%;
+    width: 40rem;
     background-color: white;
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 10;
 }
 
 .stylistTable {
@@ -175,10 +250,86 @@ body {
     gap: 10px;
     flex-direction: row;
     margin-top: 10px;
-    width: 100%;
     overflow: hidden;
 }
 
 
+/* Button affix */
+.button-affix {
+    position: sticky;
+    background-color: white;
+    bottom: 0;
+    z-index: 9;
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 30px;
+    padding-top: 20px;
+}
+
+.button-affix .button-next {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(145, 118, 90);
+    color: white;
+}
+
+
+.btn-inactive {
+    background: #e8e8e8 !important;
+    color: #767676 !important;
+}
+
+.borderCustom {
+    border: 3px solid rgb(145, 118, 90);
+}
+
+.borderCustom::after {
+    content: "\f00c";
+    font-family: FontAwesome;
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 10px;
+    border-radius: 100px;
+    top: -10px;
+    right: -10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(145, 118, 90);
+}
+
+.serviceFinalContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.totalServices {
+
+}
+
+.totalMoney {
+    text-align: right !important;
+    margin-left: auto;
+}
+
+.buttonService {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(145, 118, 90);
+    color: white;
+    width: 100%;
+}
 
 

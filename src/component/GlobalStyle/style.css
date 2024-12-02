@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;700&display=swap');
+
 *,
 p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", "Old Standard TT" !important;
+    font-family: "Outfit", sans-serif !important;
 }
 
 html {
