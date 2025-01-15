@@ -13,11 +13,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function ServiceBookingForm() {
 
-    const { data, services, changeServicesList } = useInfo();
+    const { data, dataServices, services, changeServicesList } = useInfo();
     const navigate = useNavigate();
+    const [unload, setUnload] = useState(false);
 
     function totalMoney() {
-
+        var total = 0;
+        servicesList.forEach(t => total += t.price);
+        return total;
     }
 
     var servicesList = [];
@@ -26,13 +29,19 @@ export default function ServiceBookingForm() {
         servicesList.push(element);
     });
 
+
     useEffect(() => {
+
+        if (localStorage.getItem("ReloadService") === "true") {
+            console.log("Redirect");
+            
+            navigate("/booking");
+        }
+
         $(".serviceTable").on('click', ".servicePane", function () {
             changeServices(($(this).attr("id")));
             $(this).toggleClass("borderCustom");
         });
-
-        
 
         $(".backIcon").on("click", function () {
             navigate('/booking');
@@ -50,10 +59,13 @@ export default function ServiceBookingForm() {
             $(".buttonService").removeClass("btn-inactive");
         }
         $(".totalServices").html(`You have already booked ${servicesList.length} services/combos`)
-        
+
+        window.addEventListener("beforeunload", function () {
+            localStorage.setItem("ReloadService", "true");
+        })
     }, []);
 
-    
+
 
     function changeServices(id) {
         var index = servicesList.findIndex((value) => {
@@ -62,7 +74,7 @@ export default function ServiceBookingForm() {
         if (index !== -1) {
             servicesList.splice(index, 1);
         } else {
-            servicesList.push(data.find((value) => {
+            servicesList.push(dataServices.find((value) => {
                 return id === value.id;
             }));
         }
@@ -73,7 +85,12 @@ export default function ServiceBookingForm() {
             $(".buttonService").removeClass("btn-inactive");
         }
 
-        $(".totalServices").html(`You have already booked ${servicesList.length} services/combos`)
+
+
+
+        $(".totalServices").html(`You have already booked ${servicesList.length} services/combos`);
+        $(".totalMoney").html(`Payment cost: ${totalMoney()}k VND`);
+
     }
 
     return (
@@ -95,11 +112,11 @@ export default function ServiceBookingForm() {
                 <div className='gap'></div>
                 <div className='resultSearch'>
                     <div className='serviceTable'>
-                        {data.map((service) =>
+                        {dataServices.map((service) =>
                             <ServicePane key={service.id}
-                                detail={service.detail}
+                                detail={service.description}
                                 imgSrc={service.imgSrc}
-                                heading={service.heading}
+                                heading={service.name}
                                 id={service.id}
                                 price={service.price}
                                 isChosen={servicesList.includes(service)}
@@ -112,7 +129,7 @@ export default function ServiceBookingForm() {
             <div class="button-affix">
                 <div className='serviceFinalContainer'>
                     <div className='totalServices'></div>
-                    <div className='totalMoney'>Payment cost: {0}k VND</div>
+                    <div className='totalMoney'>Payment cost: {totalMoney()}k VND</div>
                     <div class="buttonService">
                         <span>Confirm</span>
                     </div>

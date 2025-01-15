@@ -279,6 +279,12 @@ body {
 }
 
 
+@media (max-width: 991.98px) {
+    .button-affix {
+        width: 100%;
+    }
+}
+
 .btn-inactive {
     background: #e8e8e8 !important;
     color: #767676 !important;

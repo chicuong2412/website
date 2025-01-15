@@ -1,4 +1,4 @@
-import '../GlobalStyle/style.css'
+import '../GlobalStyle/style.scss'
 
 
 function Wrapper({ children }) {

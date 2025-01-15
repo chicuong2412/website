@@ -22,7 +22,7 @@ export default function Home() {
                                     <h3>Its Not Just a Haircut, Its an Experience.</h3>
                                     <h1>Being a barber is about <br />taking care of the people.</h1>
                                     <p>Our barbershop is the territory created purely for males who appreciate<br /> premium quality, time and flawless look.</p>
-                                    <a href="#" className="default_btn">Make Appointment</a>
+                                    <a href="/booking" className="default_btn">Make Appointment</a>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +32,7 @@ export default function Home() {
                                     <h3>Classic Hair Style & Shaves.</h3>
                                     <h1>Our hair styles<br />enhances your smile.</h1>
                                     <p>Our barbershop is the territory created purely for males who appreciate<br /> premium quality, time and flawless look.</p>
-                                    <a href="#" className="default_btn">Make Appointment</a>
+                                    <a href="/booking" className="default_btn">Make Appointment</a>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ export default function Home() {
                                     <h3>Its Not Just a Haircut, Its an Experience.</h3>
                                     <h1>Where mens want  <br />to look there very best.</h1>
                                     <p>Our barbershop is the territory created purely for males who appreciate<br /> premium quality, time and flawless look.</p>
-                                    <a href="#" className="default_btn">Make Appointment</a>
+                                    <a href="/booking" className="default_btn">Make Appointment</a>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="service_section bg-grey padding">
+            {/* <section className="service_section bg-grey padding">
                 <div className="container">
                     <div className="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
                         <h3>Trendy Salon &amp; Spa</h3>
@@ -119,65 +119,9 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <section className="book_section padding">
-                <div className="book_bg"></div>
-                <div className="map_pattern"></div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6 offset-md-6">
-                            <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post" id="appointment_form" className="form-horizontal appointment_form">
-                                <div className="book_content">
-                                    <h2>Make an appointment</h2>
-                                    <p>Barber is a person whose occupation is mainly to cut dress groom <br />style and shave men's and boys hair.</p>
-                                </div>
-                                <div className="form-group row">
-                                    <div className="col-md-6 padding-10">
-                                        <input type="text" id="app_name" name="app_name" className="form-control" placeholder="Name" required />
-                                    </div>
-                                    <div className="col-md-6 padding-10">
-                                        <input type="email" id="app_email" name="app_email" className="form-control" placeholder="Your Email" required />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <div className="col-md-6 padding-10">
-                                        <input type="text" id="app_phone" name="app_phone" className="form-control" placeholder="Your Phone No" required />
-                                    </div>
-                                    <div className="col-md-6 padding-10">
-                                        <input type="text" id="app_free_time" name="app_free_time" className="form-control" placeholder="Your Free Time" required />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <div className="col-md-6 padding-10">
-                                        <select className="form-control" id="app_services" name="app_services">
-                                            <option>Services</option>
-                                            <option>Hair Styling</option>
-                                            <option>Shaving</option>
-                                            <option>Face Mask</option>
-                                            <option>Hair Wash</option>
-                                            <option>Beard Triming</option>
-                                        </select>
-                                    </div>
-                                    <div className="col-md-6 padding-10">
-                                        <select className="form-control" id="app_barbers" name="app_barbers">
-                                            <option>Choose Barbers</option>
-                                            <option>Michel Brown</option>
-                                            <option>Jonathan Smith</option>
-                                            <option>Jack Tosan</option>
-                                            <option>Martin Lane</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button id="app_submit" className="default_btn" type="submit">Make Appointment</button>
-                                <div id="msg-status" className="alert" role="alert"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="team" className="team_section bd-bottom padding">
+            {/* <section id="team" className="team_section bd-bottom padding">
                 <div className="container">
                     <div className="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
                         <h3>Trendy Salon &amp; Spa</h3>
@@ -223,10 +167,10 @@ export default function Home() {
                         </li>
                     </ul>
                 </div>
-            </section>
+            </section> */}
 
 
-            <section className="pricing_section bg-grey bd-bottom padding">
+            {/* <section className="pricing_section bg-grey bd-bottom padding">
                 <div className="container">
                     <div className="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
                         <h3>Save 20% On Beauty Spa</h3>
@@ -302,7 +246,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="cta_section padding">
                 <div className="container">
@@ -317,57 +261,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
-            <section className="blog-section bd-bottom padding">
-                <div className="container">
-                    <div className="section-heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-                        <h3>From Blog</h3>
-                        <h2>A Good Newspaper Is A <br /> Nation Talking To Itself</h2>
-                    </div>
-                    <div className="row blog-wrap">
-                        <div className="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
-                            <div className="blog-item">
-                                <div className="blog-thumb">
-                                    <img src="https://html.dynamiclayers.net/dl/barbershop/img/post-1.jpg" alt="post" />
-                                    <span className="category"><a href="#">interior</a></span>
-                                </div>
-                                <div className="blog-content">
-                                    <h3><a href="#">Minimalist trending in modern architecture 2019</a></h3>
-                                    <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                                    <a href="#" className="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
-                            <div className="blog-item">
-                                <div className="blog-thumb">
-                                    <img src="https://html.dynamiclayers.net/dl/barbershop/img/post-2.jpg" alt="post" />
-                                    <span className="category"><a href="#">Architecture</a></span>
-                                </div>
-                                <div className="blog-content">
-                                    <h3><a href="#">Terrace in the town yamazaki kentaro design workshop.</a></h3>
-                                    <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                                    <a href="#" className="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
-                            <div className="blog-item">
-                                <div className="blog-thumb">
-                                    <img src="https://html.dynamiclayers.net/dl/barbershop/img/post-3.jpg" alt="post" />
-                                    <span className="category"><a href="#">Design</a></span>
-                                </div>
-                                <div className="blog-content">
-                                    <h3><a href="#">W270 house são paulo arquitetos fabio jorge architeqture.</a></h3>
-                                    <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                                    <a href="#" className="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
 
         </React.Fragment>
     )

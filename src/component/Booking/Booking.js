@@ -8,6 +8,7 @@ import StylistBookingForm from './component/StylistBookingForm';
 import React from 'react';
 import { useContext } from 'react';
 import { Routes, Route } from "react-router-dom";
+import $ from "jquery";
 
 
 var data = [{
@@ -97,47 +98,29 @@ var data = [{
 }]
 
 var dataStylist = [{
-    descrip: "Good on bed",
-    imgSrc: "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-1/434716277_1437149086898140_583746038080099202_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WEV_Nyz8p0wQ7kNvgE9EpP1&_nc_zt=24&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=Amdsr_qRr9WUeqUEufDdqRD&oh=00_AYBLfP9bQDJY6L1fHjMQ-zAzEh2-pN6-h4ADx9m7CrEXoQ&oe=674BA183",
-    name: "Dang Phu Tan",
-    id: "1",
-    rate: 4.3
-}, {
-    descrip: "Good on bed",
-    imgSrc: "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-1/434716277_1437149086898140_583746038080099202_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WEV_Nyz8p0wQ7kNvgE9EpP1&_nc_zt=24&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=Amdsr_qRr9WUeqUEufDdqRD&oh=00_AYBLfP9bQDJY6L1fHjMQ-zAzEh2-pN6-h4ADx9m7CrEXoQ&oe=674BA183",
-    name: "Dang Phu Tan 2",
+    descrip: "Specialist in men hair",
+    imgSrc: "https://html.dynamiclayers.net/dl/barbershop/img/team-1.jpg",
+    name: "Marcus",
     id: "2",
-    rate: 4.3
+    rate: 4.8
 }, {
-    descrip: "Good on bed",
-    imgSrc: "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-1/434716277_1437149086898140_583746038080099202_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WEV_Nyz8p0wQ7kNvgE9EpP1&_nc_zt=24&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=Amdsr_qRr9WUeqUEufDdqRD&oh=00_AYBLfP9bQDJY6L1fHjMQ-zAzEh2-pN6-h4ADx9m7CrEXoQ&oe=674BA183",
-    name: "Dang Phu Tan",
-    id: "3",
-    rate: 4.3
-}, {
-    descrip: "Good on bed",
-    imgSrc: "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-1/434716277_1437149086898140_583746038080099202_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WEV_Nyz8p0wQ7kNvgE9EpP1&_nc_zt=24&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=Amdsr_qRr9WUeqUEufDdqRD&oh=00_AYBLfP9bQDJY6L1fHjMQ-zAzEh2-pN6-h4ADx9m7CrEXoQ&oe=674BA183",
-    name: "Dang Phu Tan",
+    descrip: "Specialist in men hair",
+    imgSrc: "https://html.dynamiclayers.net/dl/barbershop/img/team-2.jpg",
+    name: "José Carpio",
     id: "4",
-    rate: 4.3
+    rate: 4.9
 }, {
-    descrip: "Good on bed",
-    imgSrc: "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-1/434716277_1437149086898140_583746038080099202_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WEV_Nyz8p0wQ7kNvgE9EpP1&_nc_zt=24&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=Amdsr_qRr9WUeqUEufDdqRD&oh=00_AYBLfP9bQDJY6L1fHjMQ-zAzEh2-pN6-h4ADx9m7CrEXoQ&oe=674BA183",
-    name: "Dang Phu Tan",
+    descrip: "Specialist in men hair",
+    imgSrc: "https://html.dynamiclayers.net/dl/barbershop/img/team-3.jpg",
+    name: "Michel Ibáñez",
     id: "4",
-    rate: 4.3
+    rate: 4.6
 }, {
-    descrip: "Good on bed",
-    imgSrc: "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-1/434716277_1437149086898140_583746038080099202_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WEV_Nyz8p0wQ7kNvgE9EpP1&_nc_zt=24&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=Amdsr_qRr9WUeqUEufDdqRD&oh=00_AYBLfP9bQDJY6L1fHjMQ-zAzEh2-pN6-h4ADx9m7CrEXoQ&oe=674BA183",
-    name: "Dang Phu Tan",
+    descrip: "Specialist in men hair",
+    imgSrc: "https://html.dynamiclayers.net/dl/barbershop/img/team-4.jpg",
+    name: "Adam Castellon",
     id: "4",
-    rate: 4.3
-}, {
-    descrip: "Good on bed",
-    imgSrc: "https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-1/434716277_1437149086898140_583746038080099202_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=WEV_Nyz8p0wQ7kNvgE9EpP1&_nc_zt=24&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=Amdsr_qRr9WUeqUEufDdqRD&oh=00_AYBLfP9bQDJY6L1fHjMQ-zAzEh2-pN6-h4ADx9m7CrEXoQ&oe=674BA183",
-    name: "Dang Phu Tan",
-    id: "4",
-    rate: 4.3
+    rate: 4.5
 }]
 
 var dataLocation = [{
@@ -184,8 +167,29 @@ function BookingSite() {
 
     let url = new URLSearchParams(window.location.pathname);
     console.log(url.toString());
-    
-    
+
+    const [dataServices, setDataServices] = useState([]);
+
+    useEffect(() => {
+        if (localStorage.getItem("ReloadService") === undefined) {
+            localStorage.setItem("ReloadService", "false");
+        } else if (localStorage.getItem("ReloadService") === "true") {
+            localStorage.setItem("ReloadService", "false");
+        }
+            
+        $.ajax({
+            url: "http://localhost:3120/identity/service/getAllPublicServices",
+            type: 'GET',
+            dataType: 'json',
+            CORS: false,
+            contentType: 'application/json',
+            secure: true,
+            async: true,
+            success: function (data) {
+                setDataServices([...data.result]);
+            }
+        });
+    }, []);
 
     function changeLocation(id) {
         for (let locationNode of dataLocation) {
@@ -200,20 +204,18 @@ function BookingSite() {
         setServices(servicesBookedList)
     }
 
-    
-
     function changeStylist(id, name) {
         setStylist(id);
         setNameStylist(name);
         console.log(name);
     }
 
-    
+
 
 
 
     return (
-        <BookingInfo.Provider value={{ services, changeServicesList, location, changeLocation, stylist, setStylist, dateTime, setDateTime, data, dataStylist, changeStylist, dataLocation, nameStylist }}>
+        <BookingInfo.Provider value={{ dataServices, services, changeServicesList, location, changeLocation, stylist, setStylist, dateTime, setDateTime, data, dataStylist, changeStylist, dataLocation, nameStylist }}>
             <div className='container-Booking'>
                 <Routes>
                     <Route path='/' element={<BookingMainForm></BookingMainForm>}></Route>

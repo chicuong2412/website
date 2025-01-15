@@ -29,32 +29,32 @@ async function loginChecking(username, password) {
     //         console.log("Response body:", data);
     //     });
 
-    $.ajax({
-        url: "http://localhost:3120/identity/auth/customers/login",
-        type: 'POST',
-        dataType: 'json',
-        CORS: false,
-        contentType: 'application/json',
-        secure: true,
-        data: JSON.stringify({
-            username: username,
-            password: password
-        }),
-        async: false
-        ,
-        success: function (data) {
-            console.log(data);
-            if (data.code == 1000) {
+    // $.ajax({
+    //     url: "http://localhost:3120/identity/auth/customers/login",
+    //     type: 'POST',
+    //     dataType: 'json',
+    //     CORS: false,
+    //     contentType: 'application/json',
+    //     secure: true,
+    //     data: JSON.stringify({
+    //         username: username,
+    //         password: password
+    //     }),
+    //     async: false
+    //     ,
+    //     success: function (data) {
+    //         console.log(data);
+    //         if (data.code == 1000) {
                 
-            }
-        }
-    })
+    //         }
+    //     }
+    // })
 
     return true;
 }
 
 function Register({ username, password }) {
-
+    
 
     return true;
 }

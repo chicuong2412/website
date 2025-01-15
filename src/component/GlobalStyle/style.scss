@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;700&display=swap');
+@import "primereact/resources/themes/lara-light-indigo/theme.css";
+@import "primereact/resources/primereact.css";                  
+@import "primeicons/primeicons.css";  
 
 *,
 p {
@@ -19,9 +22,9 @@ img {
     max-height: 100%;
 }
 
-ul {
+/* ul {
     padding-left: 0px !important;
-}
+} */
 
 a {
     text-decoration: none !important;

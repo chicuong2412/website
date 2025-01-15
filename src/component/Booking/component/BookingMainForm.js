@@ -148,7 +148,7 @@ function BookingMainForm() {
                         {services.map((value) =>
                             <SmallServicePane
                                 id={value.id}
-                                heading={value.heading}
+                                heading={value.name}
                             ></SmallServicePane>
                         )}
                     </div>

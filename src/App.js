@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import BookingPage from './pages/BookingPage';
 
 export default function App() {
-  console.log(<BookingPage></BookingPage>)
   return (
   <BrowserRouter>
       <Routes>

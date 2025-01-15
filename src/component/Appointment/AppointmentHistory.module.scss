@@ -17,7 +17,7 @@
     }
 
     .Pagination nav ul {
-        background-color: #f5eee7;
+        background-color: #fff;
     }
 
     .tableHeading {
@@ -43,13 +43,10 @@
 
     position: relative;
     width: 32%;
-    // box-shadow: 10px 10px 5px #babecc,
-    //     -10px -10px 5px #ffffff;
     padding: 15px;
     padding-top: 35px;
-    background-color:  #f5eee7;
-    border: 10px solid #fff;
-    
+    background-color:  #fff;
+    border-radius: 10px;
 
     transition: box-shadow 500ms;
 
@@ -64,11 +61,15 @@
     &:hover {
         box-shadow: none;
     }
+
+    @media (max-width: 991.98px) {
+       width: 48%;
+    }
 }
 
 .title {
-  color: rgb(214, 156, 74);
-  font-weight: 1000;
+  color: black;
+  font-weight: 700;
 }
 
 .expandedCard {

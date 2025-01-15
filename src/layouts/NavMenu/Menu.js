@@ -1,13 +1,14 @@
 import style from './css/MenuStyle.module.scss'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 function NavMenu({backgroundWhite, positionFixed}) {
     var navClassName = backgroundWhite ? "":"invisibleBackground";
     navClassName += (positionFixed ? " posFixed":"");
+    const navigate = useNavigate();
     return (
         <nav className={navClassName} >
             <div className={style.logo}>
-                <img src='https://demo.harutheme.com/shang/wp-content/themes/shang/framework/admin-assets/images/theme-options/logo.png'></img>
+                <img onClick={() => navigate("/")} src='https://demo.harutheme.com/shang/wp-content/themes/shang/framework/admin-assets/images/theme-options/logo.png'></img>
             </div>
             <ul className={style.mainMenu} id="mainMenu">
                 <li>
@@ -114,7 +115,7 @@ function NavMenu({backgroundWhite, positionFixed}) {
                     </div>
                 </li>
                 <li><a href="">Contact</a></li>
-                <li className={style.loginAndRe}><a href='/login'>Login</a>/<a>Register</a></li>
+                <li className={style.loginAndRe}><a href='/login'>Login</a>/<a href='/register'>Register</a></li>
             </ul>
         </nav>
     );

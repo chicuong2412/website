@@ -7,7 +7,6 @@ import MenuInLog from './NavMenu/MenuInLog'
 export function Layouts({ children }) {
     return (
         <Wrapper>
-
             <Menu/>
             {children}
             <Footer/>

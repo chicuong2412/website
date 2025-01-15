@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom'
 
 export default function UserTab() {
 
-    const {setIsLogged} = useLogin()
+    const { setIsLogged } = useLogin()
     const navigate = useNavigate()
 
     useEffect(() => {
-        $(".signOut").on('click', function() {
+        $(".signOut").on('click', function () {
             setIsLogged(false)
             localStorage.removeItem("username")
             navigate('/')
@@ -18,9 +18,10 @@ export default function UserTab() {
     })
 
     return (
-        <div className={style.userTab}>
-            <a href='/appointments'>Appointment history</a>
-            <p className='signOut'>Sign out</p>
-        </div>
+        <ul className={style.userTab}>
+            <li><a href='/profile'>Profile</a></li>
+            <li><a href='/appointments'>Appointment history</a></li>
+            <li><p className='signOut'>Sign out</p></li>
+        </ul>
     )
 }
